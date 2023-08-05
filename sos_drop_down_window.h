@@ -10,7 +10,7 @@ BEGIN_JUCE_MODULE_DECLARATION
       name:             DropDownWindowModule
       description:      DropDownWindow
       license:          GPL/Commercial
-      dependencies:     juce_gui_basics
+      dependencies:     juce_gui_basics, juce_graphics
 
      END_JUCE_MODULE_DECLARATION
 
