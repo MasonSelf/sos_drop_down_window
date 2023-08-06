@@ -36,8 +36,8 @@ void DropDownArrow::paint(juce::Graphics& g)
     g.fillEllipse(midPoint.x - halfLineWidth, midPoint.y - halfLineWidth, lineThickness, lineThickness);
 }
 
-DropDownTab::DropDownTab(juce::Colour _backgroundColor, juce::Colour _textColor, juce::String displayText, float arrowThickness)
-: juce::Button(displayText), arrow(_textColor, arrowThickness), backgroundColor(_backgroundColor), textColor(_textColor), text(displayText)
+DropDownTab::DropDownTab(juce::Colour _backgroundColor, juce::Colour _textColor, juce::String displayText, float arrowThickness, float fontSize = 12.0f)
+: juce::Button(displayText), arrow(_textColor, arrowThickness), backgroundColor(_backgroundColor), textColor(_textColor), text(displayText), textSize(fontSize)
 {
     setToggleable(true);
     setClickingTogglesState(true);
@@ -50,7 +50,7 @@ void DropDownTab::paintButton (juce::Graphics &g, bool, bool)
     g.fillAll();
 
     g.setColour(textColor);
-    g.setFont(12.0f);
+    g.setFont(textSize);
     g.drawFittedText(text, 3, 0, getWidth(), getHeight(), juce::Justification::centredLeft, 1);
 }
 void DropDownTab::resized()
