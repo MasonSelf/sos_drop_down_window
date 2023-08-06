@@ -20,7 +20,7 @@ struct DropDownArrow : public juce::Component
 class DropDownTab : public juce::Button
 {
 public:
-    DropDownTab(juce::Colour _backgroundColor, juce::Colour _textColor, juce::String displayText, float arrowThickness, float fontSize);
+    DropDownTab(juce::Colour _backgroundColor, juce::Colour _textColor, juce::String displayText, float arrowThickness, float fontSize = 12.0f);
     void paintButton (juce::Graphics &g, bool, bool) override;
     void resized() override;
     void buttonStateChanged() override;
